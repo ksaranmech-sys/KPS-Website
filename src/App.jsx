@@ -36,6 +36,17 @@ const businesses = [
     linkLabel: 'Discuss a partnership',
     icon: 'globe',
   },
+  {
+    number: '04',
+    category: 'SOFTWARE DEVELOPMENT',
+    title: 'Software solutions',
+    description:
+      'We build practical digital solutions that help businesses work smarter, serve customers, and grow.',
+    points: ['Website development', 'Billing software', 'Mobile platforms'],
+    link: 'mailto:Saravanan.k@kpstechnology.in?subject=Software%20project%20enquiry',
+    linkLabel: 'Discuss a software project',
+    icon: 'support',
+  },
 ];
 
 function ArrowIcon({ diagonal = false }) {
@@ -66,6 +77,15 @@ function BusinessIcon({ name }) {
         <circle cx="24" cy="24" r="10" stroke="currentColor" strokeWidth="1.8" />
         <circle cx="24" cy="24" r="3" stroke="currentColor" strokeWidth="1.8" />
         <path d="m24 24 12-12M24 7v4m17 13h-4M7 24h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (name === 'support') {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 48 48" fill="none">
+        <path d="M8 25v-3a16 16 0 0 1 32 0v3M8 25h5a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-2a4 4 0 0 1-4-4v-9Zm32 0h-5a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h2a4 4 0 0 0 4-4v-9Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M35 38c-2 2-5 3-9 3h-3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <circle cx="21" cy="41" r="2" stroke="currentColor" strokeWidth="1.8" />
       </svg>
     );
   }
@@ -183,11 +203,11 @@ function App() {
           <div className="section-intro">
             <div>
               <p className="eyebrow"><span className="eyebrow-line" />What we do</p>
-              <h2>Three businesses.<br /><span>One trusted partner.</span></h2>
+              <h2>Four businesses.<br /><span>One trusted partner.</span></h2>
             </div>
             <p className="section-description">
-              We work across logistics, vehicle technology, and international
-              trade—bringing focus and care to every connection.
+              We work across logistics, vehicle technology, software support,
+              and international trade—bringing focus and care to every connection.
             </p>
           </div>
           <div className="business-grid">
